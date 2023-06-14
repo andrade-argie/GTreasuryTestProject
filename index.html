@@ -1,39 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>NPV Calculator</title>
-    <link rel="stylesheet" href="./assets/styles.css" />
-  </head>
-  <body>
-    <div id="app">
-      <img src="./assets/images/logo.png" alt="" class="logo">
-      <div class="nav-bar"></div>
+<html>
+
+<head>
+  <title>Net Present Value Calculator</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+
+<body>
+
+  <div id="app">
+    <img src="./assets/images/logo.png" alt="" class="logo">
+    <div class="nav-bar"></div>
+  </div>
+
+  <div class="wrapper">
+    <div class="inputfield">
+      <label for="initCost">Initial Cost</label>
+      <input type="number" class="input" id="initCost" step="0.01" min="0">
     </div>
+      <div class="inputfield">
+        <label for="lowerBound">Lower Bound Discount Rate %</label>
+        <input type="number" class="input" id="lowerBound" step="0.01" min="0" max="100">
+      </div>
+      <div class="inputfield">
+        <label for="upperBound">Upper Bound Discount Rate %</label>
+        <input type="number" class="input" id="upperBound" step="0.01" min="0" max="100">
+      </div>
+      <div class="inputfield">
+        <label for="incrementRate">Discount Rate Increment %</label>
+        <input type="number" class="input" id="incrementRate" step="0.01" min="0" max="100">
+        </div>
+      <div class="inputfield">
+      <button id="calculateBtn" class="btn">Calculate</button>
+      </div>
+  </div>
 
-    <div class="wrapper">
-      <div class="form">
-         <div class="inputfield">
-            <label>Initial Investment</label>
-            <span></span>
-            <input type="text" class="input" id="initInvesment" required>
-         </div>  
-          <div class="inputfield">
-            <label>Last Name</label>
-            <input type="text" class="input">
-         </div>  
-         <div class="inputfield">
-            <label>Password</label>
-            <input type="password" class="input">
-         </div>  
-        <div class="inputfield">
-            <label>Confirm Password</label>
-            <input type="password" class="input">
-         </div> 
-  </div>	
+  <div id="output"></div>
 
+  <script src="./main.js"></script>
+</body>
 
-    <script src="./main.js"></script>
-
-  </body>
 </html>
