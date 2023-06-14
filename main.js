@@ -1,4 +1,4 @@
-var cashFlow = [500, 1000, 1500];
+var cashFlow = [500, 1000, 1500, 2000, 2500];
 
 unitTest();
 
